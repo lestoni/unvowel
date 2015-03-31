@@ -1,12 +1,12 @@
 {
   "name": "unvowel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Removes all vowels from a string",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --reporter spec"
   },
-  "bin" : {
+  "bin": {
     "unvowel": "./bin/unvowel"
   },
   "repository": {
