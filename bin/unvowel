@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+var program = require('commander');
+
+var unvowel = require('../');
+var pkg = require('../package.json');
+
+program
+  .version(pkg.version)
+  .option('-s, --string [value]', 'String to unvowel')
+  .option('-j, --join',   'join strings, default[false]');
+
+program.on('--help', function() {
+  console.log('  Examples:');
+  console.log('');
+  console.log('\t$ unvowel -s \'good yuki\'');
+  console.log('\t$ unvowel -s \'good yuki\' --join');
+});
+
+program.parse(process.argv);
+
+function main(){
+  var join = program.join;
+  var str = program.string;
+
+  var output =  unvowel.parse(str, join);
+
+  console.log(output);
+}
+
+main();

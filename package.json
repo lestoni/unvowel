@@ -1,0 +1,31 @@
+{
+  "name": "unvowel",
+  "version": "1.0.0",
+  "description": "Removes all vowels from a string",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lestoni/unvowel.git"
+  },
+  "keywords": [
+    "vowel",
+    "password",
+    "language",
+    "generator"
+  ],
+  "author": "Tony Mutai <tonimut7@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lestoni/unvowel/issues"
+  },
+  "homepage": "https://github.com/lestoni/unvowel",
+  "devDependencies": {
+    "mocha": "~2.2.1"
+  },
+  "dependencies": {
+    "commander": "~2.7.1"
+  }
+}
