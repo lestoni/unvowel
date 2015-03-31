@@ -6,6 +6,9 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --reporter spec"
   },
+  "bin" : {
+    "unvowel": "./bin/unvowel"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/lestoni/unvowel.git"
