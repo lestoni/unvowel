@@ -1,4 +1,5 @@
 // jshint mocha:true
+
 var unvowel = require('./');
 var assert  = require('assert');
 
