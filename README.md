@@ -1,6 +1,6 @@
 # unvowel
 
-[![build status](https://secure.travis-ci.org/lestoni/unvowel.png)](http://travis-ci.org/lestoni/unvowel)
+[![build status](https://travis-ci.org/lestoni/unvowel.png)](http://travis-ci.org/lestoni/unvowel)
 
 Works by removing vowels from a string.
 
