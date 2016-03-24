@@ -3,5 +3,5 @@ exports.parse = function parse(string, join){
     throw new TypeError('Expected a string as the first option');
   }
 
-  return string.replace(join ? /[aeiou\s]/gi : /[aeiou]/gi);
+  return string.replace(join ? /[aeiou\s]/gi : /[aeiou]/gi, '');
 };
