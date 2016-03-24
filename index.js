@@ -1,16 +1,5 @@
-var VOWELS   = /[aeiou]+/gi;
-var WHITE_SPACE = /\s+/g;
-var NOTHING  = '';
-
-function tokenize(str){
-  return str.split(WHITE_SPACE);
-}
-
-function replace(tokens){
-  return tokens.map(function(t){
-    return t.replace(VOWELS,NOTHING);
-  });
-}
+var VOWELS   = /[aeiou]/gi;
+var VOWELS_AND_SPACE = /[aeiou\s]/g;
 
 exports.parse = function parse(string, join){
   if(typeof string !== 'string'){
@@ -18,9 +7,10 @@ exports.parse = function parse(string, join){
   }
 
   join = join || false;
+  var replacer = VOWELS;
+  if (join) {
+      replacer = VOWELS_AND_SPACE;
+  }
 
-  var tokens = tokenize(string);
-  var unvoweled = replace(tokens);
-
-  return join ? unvoweled.join('') : unvoweled.join(' ');
+  return string.replace(replacer, '');
 };
