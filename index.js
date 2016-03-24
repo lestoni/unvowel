@@ -6,10 +6,5 @@ exports.parse = function parse(string, join){
     throw new TypeError('Expected a string as the first option');
   }
 
-  var replacer = VOWELS;
-  if (join) {
-      replacer = VOWELS_AND_SPACE;
-  }
-
-  return string.replace(replacer, '');
+  return string.replace(join ? VOWELS_AND_SPACE : VOWELS, '');
 };
