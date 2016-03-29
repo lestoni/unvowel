@@ -9,9 +9,9 @@ var VOWELS      = /[aeiou]+/gi;
 describe('unvowel#parse', function() {
   it('should remove vowels from a string', function(){
     var str = 'aeiou';
-    var unvoweled = unvowel.parse(str).split(/\s+/g);
+    var unvoweled = unvowel.parse(str);
 
-    assert.equal(unvoweled.indexOf(VOWELS), -1);
+    assert.equal(unvoweled, '');
   });
 
   it('should not join strings after unvoweling by default', function() {
